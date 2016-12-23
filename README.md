@@ -1,6 +1,6 @@
 # Aurelia-cli Gentelella
 
-This is a skeleton project using the [aurelia cli](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjDgceap4rRAhVBhZAKHcWmA7oQFggaMAA&url=https%3A%2F%2Fgithub.com%2Faurelia%2Fcli&usg=AFQjCNGP0cHs-884gWtZKmhpo_agVQkIxg&bvm=bv.142059868,d.Y2I) build system merged with [Aurelia skeleton project](https://github.com/aurelia/skeleton-navigation) and [gentelella](https://github.com/puikinsh/gentelella) bootstrap admin template 
+This is a skeleton project using the [aurelia cli](https://github.com/aurelia/cli) build system merged with [Aurelia skeleton project](https://github.com/aurelia/skeleton-navigation) and [gentelella](https://github.com/puikinsh/gentelella) bootstrap admin template 
 
 It does not currently have support for all the pages of existing gentelella, and some of the javascript tools (like pie charts) needed for dashboard controls have not yet been incorporated in project. 
 
