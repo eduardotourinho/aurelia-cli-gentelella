@@ -1,0 +1,21 @@
+<template>
+  <div class="col-md-4 col-sm-4 col-xs-12 profile_details au-animate">
+    <div class="well profile_view">
+      <div class="col-sm-12">
+        <div class="left col-xs-7">
+          <h2>${profile.login}</h2>
+        </div>
+        <div class="right col-xs-5 text-center">
+          <img src="${profile.avatar_url}" alt="" class="img-circle img-responsive">
+        </div>
+      </div>
+      <div class="col-xs-12 bottom text-center">
+        <div class="col-xs-12 col-sm-6 emphasis">
+          <a href="${profile.html_url}" type="button" class="btn btn-primary btn-xs">
+            <i class="fa fa-user"> </i> Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

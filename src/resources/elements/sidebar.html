@@ -1,0 +1,19 @@
+<template>
+  <require from="./side-menu"></require>
+  <require from="./sidebar-welcome"></require>
+  <require from="./sidebar-footer.html"></require>
+
+  <div class="col-md-3 left_col" id.bind="id">
+    <div class="left_col scroll-view">
+      <div class="navbar nav_title">
+        <slot></slot>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <sidebar-welcome user.bind="profile"></sidebar-welcome>
+      <side-menu router.bind="router"></side-menu>
+      <sidebar-footer></sidebar-footer>
+    </div>
+  </div>
+</template>

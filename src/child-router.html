@@ -1,0 +1,20 @@
+<template>
+  <section class="au-animate">
+    <panel>
+      <h2 slot="title">${heading}</h2>
+
+      <div class="x_content" slot="content">
+        <div class="col-md-2">
+          <ul class="well nav nav-pills nav-stacked">
+            <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+              <a href.bind="row.href">${row.title}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-10" style="padding: 0">
+          <router-view></router-view>
+        </div>
+      </div>
+    </panel>
+  </section>
+</template>

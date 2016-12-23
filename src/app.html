@@ -1,0 +1,23 @@
+<template>
+  <require from="./styles/style.css"></require>
+
+  <require from="resources/elements/sidebar"></require>
+  <require from="resources/elements/app-title"></require>
+  <require from="resources/elements/nav-bar"></require>
+
+  <div class="container body">
+    <div class="main_container">
+
+      <sidebar  profile.bind="authenticatedUser" router.bind="router">
+        <app-title><i class="fa fa-paw"></i> Gentelella</app-title>
+      </sidebar>
+
+      <nav-bar profile.bind="authenticatedUser"></nav-bar>
+
+      <div class="right_col" role="main">
+        <router-view></router-view>
+      </div>
+    </div>
+  </div>
+
+</template>

@@ -1,0 +1,12 @@
+<template bindable="user">
+  <div class="profile"><!--img_2 -->
+    <div class="profile_pic">
+      <img src="${user.photoUrl || '/scripts/images/user.png'}" alt.bind="user.name" class="img-circle profile_img">
+    </div>
+    <div class="profile_info">
+      <span>Welcome,</span>
+      <h2>${user.name}</h2>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</template>
