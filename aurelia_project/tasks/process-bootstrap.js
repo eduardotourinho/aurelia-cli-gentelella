@@ -5,7 +5,7 @@ import project from "../aurelia.json";
 export default function processBootstrap() {
   const source = 'node_modules/bootstrap-sass/assets';
 
-  const taskFonts = gulp.src(`${source}/fonts/*`)
+  const taskFonts = gulp.src(`${source}/fonts/bootstrap/*`)
     .pipe(changedInPlace({ firstPass: true }))
     .pipe(gulp.dest(`${project.platform.output}/fonts`));
 

@@ -2,6 +2,10 @@ import * as NProgress from "nprogress";
 
 export class App {
 
+  constructor() {
+    this.calculateHeight = e => { debounce(calculateHeight()) };
+  }
+
   configureRouter(config, router) {
     let preActivate = {
       run: (navigationInstruction, next) => {
@@ -42,11 +46,11 @@ export class App {
 
   attached() {
     calculateHeight();
-    window.addEventListener('resize', calculateHeight);
+    window.addEventListener('resize', this.calculateHeight);
   }
 
   detached() {
-    window.removeEventListener('resize', calculateHeight);
+    window.removeEventListener('resize', this.calculateHeight);
   }
 }
 
@@ -66,3 +70,25 @@ let calculateHeight = () => {
   rightCol.css('min-height', contentHeight);
 };
 
+// debouncing function from John Hann
+// http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+let debounce = (func, threshold, execAsap) => {
+    let timeout;
+
+    return function debounced () {
+      let obj = this, args = arguments;
+      function delayed () {
+        if (!execAsap)
+          func.apply(obj, args);
+        timeout = null;
+      }
+
+      if (timeout) {
+        clearTimeout(timeout);
+      } else if (execAsap) {
+        func.apply(obj, args);
+      }
+
+      timeout = setTimeout(delayed, threshold || 100);
+    };
+};
